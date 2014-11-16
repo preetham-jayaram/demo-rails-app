@@ -1,6 +1,10 @@
 <h1>Say#hello</h1>
-<p> It is now <%= Time.now %>
+<p> It is now <%= Time.now %> which is same as <%= @time %> and time after 1 hour = <%= 1.hour.from_now %> 
 </p>
+File listings are :
+<% for file in @files %>
+	<%= file %>
+<% end %>
 <p>
 	<%= link_to("Goodbye", say_bye_path ) %>
 </p>
